@@ -16,29 +16,30 @@
         color: #333;
       }
 
-      h1,
-      h2,
+      ul {
+        margin: 0;
+        padding-left: 1.2rem;
+      }
+
+      h1, h2 {
+        margin: 0;
+      }
+
       h3 {
         color: #2c3e50;
+        margin: 0;
+      }
+
+      h4 {
+        margin: 0;
       }
 
       img.avatar {
-        width: 120px;
+        width: 150px;
         border-radius: 50%;
+        border: 2px solid #ddd;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         margin-bottom: 1rem;
-      }
-
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 1rem;
-      }
-
-      th,
-      td {
-        padding: 0.5rem;
-        border: 1px solid #ccc;
-        text-align: left;
       }
 
       a {
@@ -51,7 +52,7 @@
       }
 
       hr {
-        margin: 2rem 0;
+        margin: 0.5rem 0 1rem;
       }
 
       .avatar {
@@ -67,16 +68,6 @@
         margin-right: 0.3rem;
       }
 
-      @media (max-width: 600px) {
-        body {
-          padding: 1rem;
-        }
-
-        .avatar {
-          width: 100px;
-        }
-      }
-
       .page-break {
         page-break-before: always;
       }
@@ -84,35 +75,101 @@
       .section {
         page-break-inside: avoid;
         break-inside: avoid;
-        padding-bottom: 1rem;
+      }
+
+      .section.centered {
+        text-align: center;
+      }
+
+      .section.centered img.avatar {
+        margin: 0 auto;
+        display: block;
+      }
+
+      .section.centered p {
+        margin: 0.5rem 0;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1rem;
+        table-layout: fixed;
+        word-wrap: break-word;
+      }
+
+      th,
+      td {
+        padding: 4px;
+        border: 1px solid #ccc;
+        text-align: left;
+        max-width: 100%;
+        overflow-wrap: break-word;
+      }
+
+      th:nth-child(1), td:nth-child(1) {
+        width: 20%;
+      }
+
+      th:nth-child(2), td:nth-child(2) {
+        width: 80%;
+      }
+
+      @media screen and (max-width: 600px) {
+        body {
+          padding: 1rem;
+        }
+
+        .avatar {
+          width: 100px;
+        }
+
+        th, td {
+          display: block;
+          width: 100% !important;
+        }
+
+        table {
+          display: block;
+          overflow-x: auto;
+        }
+      }
+
+      @media screen and (min-width: 601px) and (max-width: 991px) {
+        th:nth-child(1), td:nth-child(1) {
+          width: 25%;
+        }
+        th:nth-child(2), td:nth-child(2) {
+          width: 75%;
+        }
       }
     </style>
+
   </head>
   <body>
     <button onclick="exportPDF()" style="padding: 10px 16px; margin-bottom: 20px; background-color: #2980b9; color: white; border: none; border-radius: 5px;"> 📄 Export to PDF </button>
     <div id="cv">
-      <div class="section">
+      <div class="section centered">
         <h1>LE PHUC ANH - 24/01/1998</h1>
         <img src="https://phucanh08.github.io/anhlp-cv/avatar.jpeg" alt="Avatar" class="avatar">
         <p>
-          <i class="fa-solid fa-phone"></i> 0375221238 | <i class="fa-solid fa-envelope"></i>
-          <a href="mailto:anh.lp240198@gmail.com">anh.lp240198@gmail.com</a> | <i class="fa-solid fa-location-dot"></i> Hanoi, Vietnam
+          <i class="fa-solid fa-phone"></i> 0375221238 |
+          <i class="fa-solid fa-envelope"></i>
+          <a href="mailto:anh.lp240198@gmail.com">anh.lp240198@gmail.com</a> |
+          <i class="fa-solid fa-location-dot"></i> Hanoi, Vietnam
         </p>
         <p>
           <i class="fa-brands fa-github"></i>
-          <a href="https://github.com/phucanh08">https://github.com/phucanh08</a> | <i class="fa-brands fa-linkedin"></i>
-          <a href="https://www.linkedin.com/in/lê-phúc-anh-61195a256/">https://www.linkedin.com/in/lê-phúc-anh-61195a256/</a>
+          <a href="https://github.com/phucanh08">github.com/phucanh08</a> |
+          <i class="fa-brands fa-linkedin"></i>
+          <a href="https://www.linkedin.com/in/lê-phúc-anh-61195a256/">linkedin.com/in/lê-phúc-anh-61195a256</a>
         </p>
-        <hr>
+        <br/>
       </div>
 
       <div class="section">
-        <h2>👨‍💻 PERSONAL STATEMENT</h2>
-        <p>I am a Flutter developer with over 5 years of experience in developing mobile applications, particularly in sectors such as healthcare, transportation, and aviation. I’m looking for a professional and innovative environment where I can contribute to building real-world impactful products.</p>
-      </div>
-
-      <div class="section">
-        <h2>🎓 EDUCATION</h2>
+        <h2 >EDUCATION</h2> 
+        <hr/>
         <p>
           <strong>Hanoi University of Science and Technology</strong>
           <br> Sep 2016 – Mar 2022 <br> Major: Electrical Equipment Engineering
@@ -120,7 +177,14 @@
       </div>
 
       <div class="section">
-        <h2>👨‍💼 WORK EXPERIENCE</h2>
+        <h2>PERSONAL INTRODUCTION AND CAREER OBJECTIVE</h2>
+        <hr/>
+        <p>I am a Flutter developer with over 5 years of experience in developing mobile applications, particularly in sectors such as healthcare, transportation, and aviation. I’m looking for a professional and innovative environment where I can contribute to building real-world impactful products.</p>
+      </div>
+
+      <div class="section">
+        <h2>WORK EXPERIENCE</h2>
+        <hr/>
         <h3>🎯 Flutter Team Lead — ETC Technology Systems JSC (Dec 2022 – Present)</h3>
         <ul>
           <li>
@@ -160,7 +224,8 @@
       </div>
 
       <div class="section">
-        <h2>💪 SKILLS & TOOLS</h2>
+        <h2>SKILLS & TOOLS</h2>
+        <hr/>
         <table>
           <tr>
             <th>Category</th>
@@ -191,10 +256,261 @@
             <td>Leaflet Map, WebView crawling, NFC/RFID</td>
           </tr>
         </table>
+        <br/>
       </div>
 
       <div class="section">
-        <h2>🌐 PROJECTS & GITHUB</h2>
+        <h2>PROJECTS & GITHUB</h2>
+        <hr/>
+
+        <h3>List of featured projects</h3>
+        <h4>iACV</h4>
+        (Jul 2024 - Present)
+        <table>
+          <tr>
+            <th>Customer</th>
+            <td>AIRPORTS CORPORATION OF VIETNAM</td>
+          </tr>
+          <tr>
+            <th>Description</th>
+            <td>
+              iACV is the official application of the Vietnam Airports Corporation (ACV), providing an all-in-one solution for passengers at over 20 airports nationwide.
+              <br/>
+              <p>Key features:</p>
+              <ul>
+                <li>
+                  <strong>Smart E-Board:</strong> Move seamlessly through security checkpoints with facial recognition—no need to present physical documents.
+                </li>
+                <li>
+                  <strong>Track Your Journey:</strong> Get real-time updates on key touchpoints: check-in, security gates, lounges, boarding gates, baggage claim, and more.
+                </li>
+                <li>
+                  <strong>Personalized Flight Information:</strong> Stay updated on flight times, boarding gates, baggage details, and electronic boards—all on your phone.
+                </li>
+                <li>
+                  <strong>Real-Time Flight Sharing:</strong> Share your flight status with family and colleagues in real time.
+                </li>
+                <li>
+                  <strong>Virtual Assistant Soar:</strong> Get answers to all your aviation-related questions, including procedures, airport navigation, and service guides.
+                </li>
+                <li>
+                  <strong>Terminal Map & Smart Navigation:</strong> Easily find your way, explore amenities, shops, and services at the airport.
+                </li>
+                <li>
+                  <strong>Bilingual Support (Vietnamese – English):</strong> User-friendly interface optimized for both first-time and frequent users.
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>Team size</th>
+            <td>10</td>
+          </tr>
+          <tr>
+            <th>My position</th>
+            <td>Mobile Team Leader</td>
+          </tr>
+          <tr>
+            <th>My responsibilities</th>
+            <td>
+              - Estimate task and assign for team member
+              <br/>
+              - Development, Review code, Optimize code, Bug Fixing
+            </td>
+          </tr>
+          <tr>
+            <th>Technologies used</th>
+            <td>
+              - Android Studio, Flutter, Postman, Xcode.
+              <br/>
+              - Google Cloud Message.
+              <br/>
+              - Platform View for barcode scanner and face recognition
+              <br/>
+              - Crawl data and simulating user actions web view
+              <br/>
+              - Leaflet Map Google map tile
+              <br/>
+              - PlatformView for barcode scanner and face recognition
+            </td>
+          </tr>
+          <tr>
+            <th>Other</th>
+            <td>Leaflet Map, WebView crawling, NFC/RFID</td>
+          </tr>
+        </table>
+        <br/>
+
+
+        <h4>Saint Paul Hospital</h4>
+        (Apr 2023 - Jun 2024)
+        <table>
+          <tr>
+            <th>Customer</th>
+            <td>Saint Paul Hospital</td>
+          </tr>
+          <tr>
+            <th>Description</th>
+            <td>
+              Saint Paul Hospital application is a smart, beneficial application that helps users easily operate and manage their work.
+            </td>
+          </tr>
+          <tr>
+            <th>Team size</th>
+            <td>10</td>
+          </tr>
+          <tr>
+            <th>My position</th>
+            <td>Mobile developer</td>
+          </tr>
+          <tr>
+            <th>My responsibilities</th>
+            <td>
+              - Development
+              <br/>
+              - Review code
+              <br/>
+              - Optimize code
+              <br/>
+              - Bug Fixing
+            </td>
+          </tr>
+          <tr>
+            <th>Technologies used</th>
+            <td>
+              - Android Studio, Flutter, Postman, Xcode.
+              <br/>
+              - Google Cloud Message.
+              <br/>
+              - Sdk Face Recognition.
+            </td>
+          </tr>
+          <tr>
+            <th>Other</th>
+            <td>Leaflet Map, WebView crawling, NFC/RFID</td>
+          </tr>
+        </table>
+        <br/>
+
+         <h4>Scan Assets</h4>
+        (Mar 2023 - Jun 2023)
+        <table>
+          <tr>
+            <th>Customer</th>
+            <td>ETC JSC</td>
+          </tr>
+          <tr>
+            <th>Description</th>
+            <td>
+              Scan assets application supports manager assets by HF RFID.
+            </td>
+          </tr>
+          <tr>
+            <th>Team size</th>
+            <td>10</td>
+          </tr>
+          <tr>
+            <th>My position</th>
+            <td>Mobile developer</td>
+          </tr>
+          <tr>
+            <th>My responsibilities</th>
+            <td>
+              Development, Review code, Optimize code, Bug Fixing
+            </td>
+          </tr>
+          <tr>
+            <th>Technologies used</th>
+            <td>
+              Android Studio, Flutter, Postman, sdk nfc native of device.
+            </td>
+          </tr>
+        </table>
+        <br/>
+
+        <h4>Metell Life (Idoba)</h4>
+        (Sep 2022 - Oct 2022)
+        <table>
+          <tr>
+            <th>Customer</th>
+            <td>Appleach Inc</td>
+          </tr>
+          <tr>
+            <th>Description</th>
+            <td>
+              Metell Life is a Social network project .
+            </td>
+          </tr>
+          <tr>
+            <th>Team size</th>
+            <td>8</td>
+          </tr>
+          <tr>
+            <th>My position</th>
+            <td>Mobile developer</td>
+          </tr>
+          <tr>
+            <th>My responsibilities</th>
+            <td>
+              - Development, Review code, Optimize code, Bug Fixing
+            </td>
+          </tr>
+          <tr>
+            <th>Technologies used</th>
+            <td>
+              - Android Studio, Flutter, Postman, Xcode.
+              <br/>
+              - Google Cloud Message, FirebaseFireStore.
+            </td>
+          </tr>
+        </table>
+        <br/>
+
+        <h4>Speeeeed</h4>
+        (May 2022 - Aug 2022)
+        <table>
+          <tr>
+            <th>Customer</th>
+            <td>Appleach Inc</td>
+          </tr>
+          <tr>
+            <th>Description</th>
+            <td>
+              Speeeeed is similar to Grab, but the car is USER'S VEHICLE. The hired driver will drive
+              the user home in the user's car, not in the driver's car like Grab. The purpose is so that
+              people who are drunk, or have health problems, etc. can hire a driver to take both the
+              person and the car back to home.
+            </td>
+          </tr>
+          <tr>
+            <th>Team size</th>
+            <td>15</td>
+          </tr>
+          <tr>
+            <th>My position</th>
+            <td>Mobile developer</td>
+          </tr>
+          <tr>
+            <th>My responsibilities</th>
+            <td>
+              - Analysis and design
+              <br/>
+              - Development, Review code, Optimize code, Bug Fixing
+            </td>
+          </tr>
+          <tr>
+            <th>Technologies used</th>
+            <td>
+              - Android Studio, Flutter, Postman, Xcode.
+              <br/>
+              - Google Cloud Message, FirebaseFireStore.
+            </td>
+          </tr>
+        </table>
+        <br/>
+
+        <br/>
+        <h3>Project on store and github</h3>
         <ul>
           <li>GitHub: <a href="https://github.com/phucanh08">github.com/phucanh08</a>
           </li>
@@ -209,6 +525,7 @@
           <li>Ocanus: <a href="https://play.google.com/store/apps/details?id=com.global.ocanus">Google Play</a>
           </li>
         </ul>
+        <br/>
       </div>
     </div>
 
@@ -216,16 +533,15 @@
     <script>
       function exportPDF() {
         const element = document.getElementById("cv");
+
         const opt = {
           margin: 0.5,
           filename: 'LePhucAnh_CV.pdf',
-          image: {
-            type: 'jpeg',
-            quality: 1
-          },
+          image: { type: 'jpeg', quality: 1 },
           html2canvas: {
             scale: 4,
-            useCORS: true
+            useCORS: true,
+            scrollY: 0
           },
           jsPDF: {
             unit: 'in',
@@ -233,8 +549,23 @@
             orientation: 'portrait'
           }
         };
-        html2pdf().set(opt).from(element).save();
+
+        html2pdf()
+          .set(opt)
+          .from(element)
+          .toPdf()
+          .get('pdf')
+          .then(function (pdf) {
+            const totalPages = pdf.internal.getNumberOfPages();
+            for (let i = 1; i <= totalPages; i++) {
+              pdf.setPage(i);
+              pdf.setFontSize(10);
+              pdf.text('Page ' + i + ' of ' + totalPages, pdf.internal.pageSize.getWidth() - 50, pdf.internal.pageSize.getHeight() - 10);
+            }
+          })
+          .save();
       }
     </script>
+
   </body>
 </html>
