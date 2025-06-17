@@ -98,6 +98,7 @@
         border: 1px solid #ccc;
         text-align: left;
         max-width: 100%;
+        word-break: break-word;
         overflow-wrap: break-word;
       }
 
@@ -154,7 +155,7 @@
         margin-top: 0.2rem;
       }
 
-      .table {
+      .table, .td, .th {
         page-break-inside: avoid;
         break-inside: avoid;
       }
@@ -584,7 +585,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script>
       function exportPDF() {
-        const element = document.getElementById("cv");
+        const element = document.getElementById('cv');
 
         const opt = {
           margin: 0.5,
