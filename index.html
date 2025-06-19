@@ -4,191 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LE PHUC ANH - CV</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-    <style>
-      body {
-        font-family: 'Roboto', sans-serif;
-        line-height: 1.6;
-        padding: 2rem;
-        max-width: 800px;
-        margin: auto;
-        color: #333;
-      }
-
-      ul {
-        margin: 0;
-        padding-left: 1.2rem;
-      }
-
-      h1, h2 {
-        margin: 0;
-      }
-
-      h3 {
-        margin: 0;
-      }
-
-      h4 {
-        margin: 0;
-      }
-
-      img.avatar {
-        width: 150px;
-        border-radius: 50%;
-        border: 2px solid #ddd;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        margin-bottom: 1rem;
-      }
-
-      a {
-        color: #2980b9;
-        text-decoration: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-
-      hr {
-        margin: 0.5rem 0 1rem;
-      }
-
-      .avatar {
-        width: 150px;
-        border-radius: 50%;
-        border: 2px solid #ddd;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      }
-
-      a.social-icon img {
-        width: 20px;
-        vertical-align: middle;
-        margin-right: 0.3rem;
-      }
-
-      .page-break {
-        page-break-before: always;
-      }
-
-      .section.centered {
-        text-align: center;
-      }
-
-      .section.centered img.avatar {
-        margin: 0 auto;
-        display: block;
-      }
-
-      .section.centered p {
-        margin: 0.5rem 0;
-      }
-
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 1rem;
-        table-layout: fixed;
-        word-wrap: break-word;
-      }
-
-      th,
-      td {
-        padding: 4px;
-        border: 1px solid #ccc;
-        text-align: left;
-        max-width: 100%;
-        word-break: break-word;
-        overflow-wrap: break-word;
-      }
-
-      th:nth-child(1), td:nth-child(1) {
-        width: 20%;
-      }
-
-      th:nth-child(2), td:nth-child(2) {
-        width: 80%;
-      }
-
-      @media screen and (max-width: 600px) {
-        body {
-          padding: 1rem;
-        }
-
-        .avatar {
-          width: 100px;
-        }
-
-        th, td {
-          display: block;
-          width: 100% !important;
-        }
-
-        table {
-          display: block;
-          overflow-x: auto;
-        }
-      }
-
-      @media screen and (min-width: 601px) and (max-width: 991px) {
-        th:nth-child(1), td:nth-child(1) {
-          width: 25%;
-        }
-        th:nth-child(2), td:nth-child(2) {
-          width: 75%;
-        }
-      }
-
-      .cv-row {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-      }
-
-      .cv-row strong {
-        font-size: 1rem;
-      }
-
-      .cv-row em {
-        display: block;
-        font-style: italic;
-        margin-top: 0.2rem;
-      }
-
-      .table, .td, .th {
-        page-break-inside: avoid;
-        break-inside: avoid;
-      }
-      ul {
-        page-break-inside: avoid;
-      }
-    </style>
-
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <button onclick="exportPDF()" style="padding: 10px 16px; margin-bottom: 20px; background-color: #2980b9; color: white; border: none; border-radius: 5px;"> 📄 Export to PDF </button>
+    <button onclick="window.print()" style="padding: 10px 16px; margin-bottom: 20px; background-color: #2980b9; color: white; border: none; border-radius: 5px;">
+      <i class="fa-solid fa-print"></i> Print
+    </button>
     <div id="cv">
       <div class="section centered">
         <h1>LE PHUC ANH - 24/01/1998</h1>
+        <br/>
         <img src="https://phucanh08.github.io/anhlp-cv/avatar.jpeg" alt="Avatar" class="avatar">
+        <br/>
         <p>
-          <i class="fa-solid fa-phone"></i> 0375221238 |
-          <i class="fa-solid fa-envelope"></i>
-          <a href="mailto:anh.lp240198@gmail.com">anh.lp240198@gmail.com</a> |
-          <i class="fa-solid fa-location-dot"></i> Hanoi, Vietnam
+          <i class="fa-solid fa-phone"></i> 0375221238 | <i class="fa-solid fa-envelope"></i>
+          <a href="mailto:anh.lp240198@gmail.com">anh.lp240198@gmail.com</a> | <i class="fa-solid fa-location-dot"></i> Hanoi, Vietnam
         </p>
         <p>
           <i class="fa-brands fa-github"></i>
-          <a href="https://github.com/phucanh08">github.com/phucanh08</a> |
-          <i class="fa-brands fa-linkedin"></i>
+          <a href="https://github.com/phucanh08">github.com/phucanh08</a> | <i class="fa-brands fa-linkedin"></i>
           <a href="https://www.linkedin.com/in/lê-phúc-anh-61195a256/">linkedin.com/in/lê-phúc-anh-61195a256</a>
         </p>
-        <br/>
+        <br />
       </div>
-
       <div class="section">
-        <h2 >EDUCATION</h2> 
-        <hr/>
+        <h2>EDUCATION</h2>
+        <hr />
         <div class="cv-row">
           <div>
             <strong>Hanoi University of Science and Technology</strong>
@@ -197,17 +40,15 @@
           <div>Sep 2016 - Mar 2022</div>
         </div>
       </div>
-      <br/>
-
+      <br />
       <div class="section">
         <h2>PERSONAL INTRODUCTION AND CAREER OBJECTIVE</h2>
-        <hr/>
+        <hr />
         <p>I am a Flutter developer with over 5 years of experience in developing mobile applications, particularly in sectors such as healthcare, transportation, and aviation. I’m looking for a professional and innovative environment where I can contribute to building real-world impactful products.</p>
       </div>
-
       <div class="section">
         <h2>WORK EXPERIENCE</h2>
-        <hr/>
+        <hr />
         <strong>Personal project</strong>
         <ul>
           <li>
@@ -217,18 +58,24 @@
             <strong>Barcode Scanner</strong> Barcode Scanner use platformview for android and iOS.
           </li>
         </ul>
-
-        <hr style="border: 0.5px solid #bbb; margin: 0.5rem 0;"/>
+        <hr style="border: 0.5px solid #bbb; margin: 0.5rem 0;" />
         <div class="cv-row">
-          <div>
-            <strong>ETC Technology Systems JSC </strong>
-            <em>Mobile Team Lead</em>
-          </div>
+          <strong>ETC Technology Systems JSC </strong>
           <div>Dec 2022 – Present</div>
         </div>
+        <em>Mobile Team Leader</em>
         <ul>
           <li>
             <strong>iACV:</strong> Flight schedule viewer with maps and services – Lead a team of 10.
+          </li>
+        </ul>
+        <em>Mobile Developer</em>
+        <ul>
+          <li>
+            <strong>AGAC:</strong> FacePod for Auto gate access control with face recognition and stream video – Developed and maintained features.
+          </li>
+          <li>
+            <strong>Counter:</strong> Facepod checkin in airport – Developed and maintained features.
           </li>
           <li>
             <strong>ETC Chatbot:</strong> Internal chatbot app – Developed and maintained features.
@@ -237,8 +84,7 @@
             <strong>ITS App:</strong> Real-time traffic data visualization using Leaflet maps.
           </li>
         </ul>
-
-        <hr style="border: 0.5px solid #bbb; margin: 0.5rem 0;"/>
+        <hr style="border: 0.5px solid #bbb; margin: 0.5rem 0;" />
         <div class="cv-row">
           <div>
             <strong>Flutter Developer — DIGI DINOS JSC </strong>
@@ -254,8 +100,7 @@
             <strong>Speeeeed:</strong> Driver booking app where the driver uses the user's vehicle.
           </li>
         </ul>
-
-        <hr style="border: 0.5px solid #bbb; margin: 0.5rem 0;"/>
+        <hr style="border: 0.5px solid #bbb; margin: 0.5rem 0;" />
         <div class="cv-row">
           <div>
             <strong>BKME JSC</strong>
@@ -278,11 +123,10 @@
           </li>
         </ul>
       </div>
-      <br/>
-
+      <br />
       <div class="section">
         <h2>SKILLS & TOOLS</h2>
-        <hr/>
+        <hr />
         <table>
           <tr>
             <th>Category</th>
@@ -313,26 +157,20 @@
             <td>Leaflet Map, WebView crawling, NFC/RFID</td>
           </tr>
         </table>
-        <br/>
+        <br />
       </div>
-
       <div class="section">
         <h2>PROJECTS & GITHUB</h2>
-        <hr/>
-
+        <hr />
         <h3>List of featured projects</h3>
-        <h4>iACV</h4>
-        (Jul 2024 - Present)
-        <table>
+        <h4>iACV</h4> (Jul 2024 - Present) <table>
           <tr>
             <th>Customer</th>
             <td>AIRPORTS CORPORATION OF VIETNAM</td>
           </tr>
           <tr>
             <th>Description</th>
-            <td>
-              iACV is the official application of the Vietnam Airports Corporation (ACV), providing an all-in-one solution for passengers at over 20 airports nationwide.
-              <br/>
+            <td> iACV is the official application of the Vietnam Airports Corporation (ACV), providing an all-in-one solution for passengers at over 20 airports nationwide. <br />
               <p>Key features:</p>
               <ul>
                 <li>
@@ -369,48 +207,26 @@
           </tr>
           <tr>
             <th>My responsibilities</th>
-            <td>
-              - Estimate task and assign for team member
-              <br/>
-              - Development, Review code, Optimize code, Bug Fixing
-            </td>
+            <td> - Estimate task and assign for team member <br /> - Development, Review code, Optimize code, Bug Fixing </td>
           </tr>
           <tr>
             <th>Technologies used</th>
-            <td>
-              - Android Studio, Flutter, Postman, Xcode.
-              <br/>
-              - Google Cloud Message.
-              <br/>
-              - Platform View for barcode scanner and face recognition
-              <br/>
-              - Crawl data and simulating user actions web view
-              <br/>
-              - Leaflet Map Google map tile
-              <br/>
-              - PlatformView for barcode scanner and face recognition
-            </td>
+            <td> - Android Studio, Flutter, Postman, Xcode. <br /> - Google Cloud Message. <br /> - Platform View for barcode scanner and face recognition <br /> - Crawl data and simulating user actions web view <br /> - Leaflet Map Google map tile <br /> - PlatformView for barcode scanner and face recognition </td>
           </tr>
           <tr>
             <th>Other</th>
             <td>Leaflet Map, WebView crawling, NFC/RFID</td>
           </tr>
         </table>
-        <br/>
-
-
-        <h4>Saint Paul Hospital</h4>
-        (Apr 2023 - Jun 2024)
-        <table>
+        <br />
+        <h4>Saint Paul Hospital</h4> (Apr 2023 - Jun 2024) <table>
           <tr>
             <th>Customer</th>
             <td>Saint Paul Hospital</td>
           </tr>
           <tr>
             <th>Description</th>
-            <td>
-              Saint Paul Hospital application is a smart, beneficial application that helps users easily operate and manage their work.
-            </td>
+            <td> Saint Paul Hospital application is a smart, beneficial application that helps users easily operate and manage their work. </td>
           </tr>
           <tr>
             <th>Team size</th>
@@ -422,39 +238,26 @@
           </tr>
           <tr>
             <th>My responsibilities</th>
-            <td>
-              Development, Review code, Optimize code, Bug Fixing
-            </td>
+            <td> Development, Review code, Optimize code, Bug Fixing </td>
           </tr>
           <tr>
             <th>Technologies used</th>
-            <td>
-              - Android Studio, Flutter, Postman, Xcode.
-              <br/>
-              - Google Cloud Message.
-              <br/>
-              - Sdk Face Recognition.
-            </td>
+            <td> - Android Studio, Flutter, Postman, Xcode. <br /> - Google Cloud Message. <br /> - Sdk Face Recognition. </td>
           </tr>
           <tr>
             <th>Other</th>
             <td>Leaflet Map, WebView crawling, NFC/RFID</td>
           </tr>
         </table>
-        <br/>
-
-         <h4>Scan Assets</h4>
-        (Mar 2023 - Jun 2023)
-        <table>
+        <br />
+        <h4>Scan Assets</h4> (Mar 2023 - Jun 2023) <table>
           <tr>
             <th>Customer</th>
             <td>ETC JSC</td>
           </tr>
           <tr>
             <th>Description</th>
-            <td>
-              Scan assets application supports manager assets by HF RFID.
-            </td>
+            <td> Scan assets application supports manager assets by HF RFID. </td>
           </tr>
           <tr>
             <th>Team size</th>
@@ -466,31 +269,22 @@
           </tr>
           <tr>
             <th>My responsibilities</th>
-            <td>
-              Development, Review code, Optimize code, Bug Fixing
-            </td>
+            <td> Development, Review code, Optimize code, Bug Fixing </td>
           </tr>
           <tr>
             <th>Technologies used</th>
-            <td>
-              Android Studio, Flutter, Postman, sdk nfc native of device.
-            </td>
+            <td> Android Studio, Flutter, Postman, sdk nfc native of device. </td>
           </tr>
         </table>
-        <br/>
-
-        <h4>Metell Life (Idoba)</h4>
-        (Sep 2022 - Oct 2022)
-        <table>
+        <br />
+        <h4>Metell Life (Idoba)</h4> (Sep 2022 - Oct 2022) <table>
           <tr>
             <th>Customer</th>
             <td>Appleach Inc</td>
           </tr>
           <tr>
             <th>Description</th>
-            <td>
-              Metell Life is a Social network project .
-            </td>
+            <td> Metell Life is a Social network project . </td>
           </tr>
           <tr>
             <th>Team size</th>
@@ -502,36 +296,22 @@
           </tr>
           <tr>
             <th>My responsibilities</th>
-            <td>
-              Development, Review code, Optimize code, Bug Fixing
-            </td>
+            <td> Development, Review code, Optimize code, Bug Fixing </td>
           </tr>
           <tr>
             <th>Technologies used</th>
-            <td>
-              - Android Studio, Flutter, Postman, Xcode.
-              <br/>
-              - Google Cloud Message, FirebaseFireStore.
-            </td>
+            <td> - Android Studio, Flutter, Postman, Xcode. <br /> - Google Cloud Message, FirebaseFireStore. </td>
           </tr>
         </table>
-        <br/>
-
-        <h4>Speeeeed</h4>
-        (May 2022 - Aug 2022)
-        <table>
+        <br />
+        <h4>Speeeeed</h4> (May 2022 - Aug 2022) <table>
           <tr>
             <th>Customer</th>
             <td>Appleach Inc</td>
           </tr>
           <tr>
             <th>Description</th>
-            <td>
-              Speeeeed is similar to Grab, but the car is USER'S VEHICLE. The hired driver will drive
-              the user home in the user's car, not in the driver's car like Grab. The purpose is so that
-              people who are drunk, or have health problems, etc. can hire a driver to take both the
-              person and the car back to home.
-            </td>
+            <td> Speeeeed is similar to Grab, but the car is USER'S VEHICLE. The hired driver will drive the user home in the user's car, not in the driver's car like Grab. The purpose is so that people who are drunk, or have health problems, etc. can hire a driver to take both the person and the car back to home. </td>
           </tr>
           <tr>
             <th>Team size</th>
@@ -543,24 +323,15 @@
           </tr>
           <tr>
             <th>My responsibilities</th>
-            <td>
-              - Analysis and design
-              <br/>
-              - Development, Review code, Optimize code, Bug Fixing
-            </td>
+            <td> - Analysis and design <br /> - Development, Review code, Optimize code, Bug Fixing </td>
           </tr>
           <tr>
             <th>Technologies used</th>
-            <td>
-              - Android Studio, Flutter, Postman, Xcode.
-              <br/>
-              - Google Cloud Message, FirebaseFireStore.
-            </td>
+            <td> - Android Studio, Flutter, Postman, Xcode. <br /> - Google Cloud Message, FirebaseFireStore. </td>
           </tr>
         </table>
-        <br/>
-
-        <br/>
+        <br />
+        <br />
         <h3>Project on store and github</h3>
         <ul>
           <li>GitHub: <a href="https://github.com/phucanh08">github.com/phucanh08</a>
@@ -578,47 +349,8 @@
           <li>Ocanus: <a href="https://play.google.com/store/apps/details?id=com.global.ocanus">Google Play</a>
           </li>
         </ul>
-        <br/>
+        <br />
       </div>
     </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    <script>
-      function exportPDF() {
-        const element = document.getElementById('cv');
-
-        const opt = {
-          margin: 0.5,
-          filename: 'LePhucAnh_CV.pdf',
-          image: { type: 'jpeg', quality: 1 },
-          html2canvas: {
-            scale: 4,
-            useCORS: true,
-            scrollY: 0
-          },
-          jsPDF: {
-            unit: 'in',
-            format: 'a4',
-            orientation: 'portrait'
-          }
-        };
-
-        html2pdf()
-          .set(opt)
-          .from(element)
-          .toPdf()
-          .get('pdf')
-          .then(function (pdf) {
-            const totalPages = pdf.internal.getNumberOfPages();
-            for (let i = 1; i <= totalPages; i++) {
-              pdf.setPage(i);
-              pdf.setFontSize(10);
-              pdf.text('Page ' + i + ' of ' + totalPages, pdf.internal.pageSize.getWidth() - 50, pdf.internal.pageSize.getHeight() - 10);
-            }
-          })
-          .save();
-      }
-    </script>
-
   </body>
 </html>
