@@ -13,7 +13,7 @@
     display: none; /* Ẩn nút và hướng dẫn khi in */
   }
 
-  .section, tr, td, th, ul, li, .cv-row {
+  tr, td, th, ul, li, .cv-row {
     break-inside: avoid;
     page-break-inside: avoid;
   }
