@@ -122,6 +122,12 @@ a.social-icon img {
     margin: 0.5rem 0;
 }
 
+.muted {
+    color: #666;
+    font-size: 0.95rem;
+    margin: 0.2rem 0;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
